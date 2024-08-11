@@ -24,6 +24,25 @@ bool isSymmetric(int arr[], int size) {
 	}
 	return true;
 }
+void checkOrder(int arr[], int size) {
+	bool increasing = true;
+	bool decreasing = true;
+
+	for (int i = 1; i < size; i++) {
+		if (arr[i] > arr[i - 1]) decreasing = false;
+		if (arr[i] < arr[i - 1]) increasing = false;
+	}
+
+	if (increasing) {
+		printf("Mang tang dan.\n");
+	}
+	else if (decreasing) {
+		printf("Mang giam dan.\n");
+	}
+	else {
+		printf("Mang khong tang khong giam.\n");
+	}
+}
 int main() {
 	int size;
 
@@ -76,7 +95,8 @@ int main() {
 
 		case 3:
 			
-
+			checkOrder(arr, size);
+			break;
 		case 4:
 			printf("Thoat chuong trinh.\n");
 			break;
