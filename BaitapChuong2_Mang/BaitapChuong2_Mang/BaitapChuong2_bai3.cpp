@@ -57,6 +57,15 @@ void interchangeSortFloatAsc(float* arr, int n) {
 		}
 	}
 }
+void interchangeSortFloatDesc(float* arr, int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (arr[i] < arr[j]) {
+				swapFloat(&arr[i], &arr[j]);
+			}
+		}
+	}
+}
 void displayIntArray(int* arr, int n) {
 	for (int i = 0; i < n; i++) {
 		printf("%d ", arr[i]);
@@ -145,7 +154,23 @@ void menu() {
 					break;
 		}
 		case 4: {
-	
+					int n;
+					printf("Nhap so phan tu: ");
+					scanf_s("%d", &n);
+					float* arr = (float*)malloc(n * sizeof(float));
+					if (arr == NULL) {
+						printf("Khong the cap phat bo nho!\n");
+						return;
+					}
+					printf("Nhap cac phan tu:\n");
+					for (int i = 0; i < n; i++) {
+						scanf_s("%f", &arr[i]);
+					}
+					interchangeSortFloatDesc(arr, n);
+					printf("Mang sau khi sap xep giam dan: ");
+					displayFloatArray(arr, n);
+					free(arr);
+					break;
 		}
 		case 5: {
 	
