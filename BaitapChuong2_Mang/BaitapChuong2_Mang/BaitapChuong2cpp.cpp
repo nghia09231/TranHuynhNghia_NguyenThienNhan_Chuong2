@@ -9,7 +9,15 @@ int timViTri(int x, int arr[], int n) {
 	}
 	return -1; // Trả về -1 nếu không tìm thấy
 }
-
+// Hàm tìm kiếm phần tử trong mảng ký tự
+int timViTriKyTu(char x, char arr[], int n) {
+	for (int i = 0; i < n; i++) {
+		if (arr[i] == x) {
+			return i;
+		}
+	}
+	return -1; // Trả về -1 nếu không tìm thấy
+}
 
 
 int main() {
@@ -40,6 +48,30 @@ int main() {
 		}
 		else {
 			printf("Khong tim thay %d trong mang so nguyen\n", so2[i]);
+		}
+	}
+	// Bài 2
+	printf("\nBai 2:\n");
+	char kyTu1[] = { 'R', 'C' };
+	for (int i = 0; i < sizeof(kyTu1) / sizeof(kyTu1[0]); i++) {
+		int viTri = timViTriKyTu(kyTu1[i], arrKyTu, nKyTu);
+		if (viTri != -1) {
+			printf("Tim thay %c tai vi tri %d\n", kyTu1[i], viTri);
+		}
+		else {
+			printf("Khong tim thay %c trong mang ky tu\n", kyTu1[i]);
+		}
+	}
+
+	char kyTu2[] = { 'D', 'Q' };
+	printf("\n");
+	for (int i = 0; i < sizeof(kyTu2) / sizeof(kyTu2[0]); i++) {
+		int viTri = timViTriKyTu(kyTu2[i], arrKyTu, nKyTu);
+		if (viTri != -1) {
+			printf("Tim thay %c tai vi tri %d\n", kyTu2[i], viTri);
+		}
+		else {
+			printf("Khong tim thay %c trong mang ky tu\n", kyTu2[i]);
 		}
 	}
 
