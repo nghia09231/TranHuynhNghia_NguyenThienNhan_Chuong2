@@ -76,7 +76,15 @@ int timKiemNhiPhan(int a[], int n, int x) {
 	}
 	return -1;
 }
-
+int demSoLuongPhanTuX(int a[], int n, int x) {
+	int dem = 0;
+	for (int i = 0; i < n; i++) {
+		if (a[i] == x) {
+			dem++;
+		}
+	}
+	return dem;
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -140,7 +148,10 @@ int main() {
 					break;
 		}
 		case 6:
-			
+			printf("Nhap gia tri x: ");
+			scanf("%d", &x);
+			printf("So luong phan tu bang %d la: %d\n", x, demSoLuongPhanTuX(a, n, x));
+			break;
 		case 7:
 			
 		case 8:
