@@ -21,6 +21,22 @@ bool hasAllOddDigits(int n) {
 	}
 	return true;
 }
+bool isAllEven(int arr[], int size) {
+	for (int i = 0; i < size; i++) {
+		if (arr[i] % 2 != 0) return false;
+	}
+	return true;
+}
+bool isAlternatingEvenOdd(int arr[], int size) {
+	if (size < 2) return true; // Dãy rỗng hoặc chỉ có 1 phần tử
+	bool expectEven = (arr[0] % 2 == 0);
+	for (int i = 1; i < size; i++) {
+		if ((arr[i] % 2 == 0) != expectEven) return false;
+		expectEven = !expectEven;
+	}
+	return true;
+}
+
 int main() {
 	int size;
 
@@ -75,13 +91,34 @@ int main() {
 					break;
 		}
 		case 3: {
-				
+					int maxVal = arr[0];
+					int lastIndex = 0;
+					for (int i = 1; i < size; i++) {
+						if (arr[i] >= maxVal) {
+							maxVal = arr[i];
+							lastIndex = i;
+						}
+					}
+					printf("Vi tri so lon nhat (cuoi cung): %d\n", lastIndex);
+					break;
 		}
 		case 4: {
-				
+					if (isAllEven(arr, size)) {
+						printf("Mang toan so chan.\n");
+					}
+					else {
+						printf("Mang khong toan so chan.\n");
+					}
+					break;
 		}
 		case 5: {
-			
+					if (isAlternatingEvenOdd(arr, size)) {
+						printf("Mang la day so chan le xen ke.\n");
+					}
+					else {
+						printf("Mang khong la day so chan le xen ke.\n");
+					}
+					break;
 		}
 		case 6:
 			printf("Thoat chuong trinh.\n");
