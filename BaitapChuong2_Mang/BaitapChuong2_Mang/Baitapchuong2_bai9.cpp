@@ -139,6 +139,19 @@ int sumBorder(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	return sum;
 }
 
+// Bài 6: Đếm tần suất xuất hiện của 1 giá trị x trong ma trận
+int countOccurrences(int matrix[MAX_SIZE][MAX_SIZE], int m, int n, int x) {
+	int count = 0;
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			if (matrix[i][j] == x) {
+				count++;
+			}
+		}
+	}
+	return count;
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -177,6 +190,12 @@ int main() {
 	int borderSum = sumBorder(matrix, m, n);
 	printf("Tong cac gia tri nam tren bien cua ma tran: %d\n", borderSum);
 
+	// Bài 6: Đếm tần suất xuất hiện của 1 giá trị x trong ma trận
+	int x;
+	printf("Nhap gia tri x: ");
+	scanf("%d", &x);
+	int occurrences = countOccurrences(matrix, m, n, x);
+	printf("Gia tri %d xuat hien %d lan.\n", x, occurrences);
 
 	return 0;
 }
