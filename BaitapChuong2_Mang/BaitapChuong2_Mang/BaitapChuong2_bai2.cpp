@@ -150,6 +150,23 @@ void xuatViTriChanLe(int a[], int n) {
 	}
 	printf("\n");
 }
+void xuatMaxMinKemViTri(int a[], int n) {
+	int max = timMax(a, n);
+	int min = timMin(a, n);
+	printf("Gia tri max: %d o vi tri: ", max);
+	for (int i = 0; i < n; i++) {
+		if (a[i] == max) {
+			printf("%d ", i);
+		}
+	}
+	printf("\nGia tri min: %d o vi tri: ", min);
+	for (int i = 0; i < n; i++) {
+		if (a[i] == min) {
+			printf("%d ", i);
+		}
+	}
+	printf("\n");
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -235,7 +252,8 @@ int main() {
 			xuatViTriChanLe(a, n);
 			break;
 		case 12:
-		
+			xuatMaxMinKemViTri(a, n);
+			break;
 		case 13:
 		
 		case 0:
