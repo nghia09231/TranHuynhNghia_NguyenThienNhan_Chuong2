@@ -66,6 +66,15 @@ void interchangeSortFloatDesc(float* arr, int n) {
 		}
 	}
 }
+void interchangeSortCharAsc(char* arr, int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (arr[i] > arr[j]) {
+				swapChar(&arr[i], &arr[j]);
+			}
+		}
+	}
+}
 void displayIntArray(int* arr, int n) {
 	for (int i = 0; i < n; i++) {
 		printf("%d ", arr[i]);
@@ -78,7 +87,12 @@ void displayFloatArray(float* arr, int n) {
 	}
 	printf("\n");
 }
-
+void displayCharArray(char* arr, int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%c ", arr[i]);
+	}
+	printf("\n");
+}
 void menu() {
 	int choice;
 	do {
@@ -173,7 +187,23 @@ void menu() {
 					break;
 		}
 		case 5: {
-	
+					int n;
+					printf("Nhap so phan tu: ");
+					scanf_s("%d", &n);
+					char* arr = (char*)malloc(n * sizeof(char));
+					if (arr == NULL) {
+						printf("Khong the cap phat bo nho!\n");
+						return;
+					}
+					printf("Nhap cac ky tu:\n");
+					for (int i = 0; i < n; i++) {
+						scanf_s(" %c", &arr[i]);
+					}
+					interchangeSortCharAsc(arr, n);
+					printf("Mang sau khi sap xep tang dan: ");
+					displayCharArray(arr, n);
+					free(arr);
+					break;
 		}
 		case 6: {
 	
