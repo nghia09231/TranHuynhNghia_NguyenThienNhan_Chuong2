@@ -1,2 +1,1 @@
-21 2991 tran huynh nghia 6.00 9.00 8.10
-22 2001 tran huynh phat 7.00 5.00 5.60
+1 123456 Nguyen Van A 8.00 7.00 7.30
