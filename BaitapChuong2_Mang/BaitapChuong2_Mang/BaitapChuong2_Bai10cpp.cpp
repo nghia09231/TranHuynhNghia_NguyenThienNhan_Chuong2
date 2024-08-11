@@ -176,6 +176,20 @@ void findExtremaInRow(int matrix[MAX_SIZE][MAX_SIZE], int n, int k, int* min, in
 	}
 }
 
+// Bài 7: Tìm phần tử lớn (nhỏ) nhất trong cột thứ k
+void findExtremaInColumn(int matrix[MAX_SIZE][MAX_SIZE], int m, int k, int* min, int* max) {
+	*min = matrix[0][k];
+	*max = matrix[0][k];
+	for (int i = 1; i < m; i++) {
+		if (matrix[i][k] < *min) {
+			*min = matrix[i][k];
+		}
+		if (matrix[i][k] > *max) {
+			*max = matrix[i][k];
+		}
+	}
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -215,6 +229,20 @@ int main() {
 	}
 	else {
 		printf("Chi so dong k khong hop le.\n");
+	}
+
+	// Bài 7: Tìm phần tử lớn (nhỏ) nhất trong cột thứ k
+	printf("Nhap chi so cot k: ");
+	scanf("%d", &k);
+	if (k >= 0 && k < n) {
+		int colMin, colMax;
+		findExtremaInColumn(matrix, m, k, &colMin, &colMax);
+		printf("Trong cot %d:\n", k);
+		printf("Gia tri nho nhat: %d\n", colMin);
+		printf("Gia tri lon nhat: %d\n", colMax);
+	}
+	else {
+		printf("Chi so cot k khong hop le.\n");
 	}
 
 	return 0;
