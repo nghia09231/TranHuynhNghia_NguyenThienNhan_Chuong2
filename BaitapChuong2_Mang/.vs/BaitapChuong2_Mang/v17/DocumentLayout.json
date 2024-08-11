@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\baitapChuong2_bai12.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|solutionrelative:BaitapChuong2_Mang\\baitapChuong2_bai12.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|solutionrelative:BaitapChuong2_Mang\\BaitapChuong2_bai11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "baitapChuong2_bai12.cpp",
+              "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\baitapChuong2_bai12.cpp",
+              "RelativeDocumentMoniker": "BaitapChuong2_Mang\\baitapChuong2_bai12.cpp",
+              "ToolTip": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\baitapChuong2_bai12.cpp",
+              "RelativeToolTip": "BaitapChuong2_Mang\\baitapChuong2_bai12.cpp",
+              "ViewState": "AQIAABwAAAAAAAAAAAAuwDMAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-11T19:53:18.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BaitapChuong2_bai11.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai11.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_bai11.cpp",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BaitapChuong2_Bai10cpp.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_Bai10cpp.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_Bai10cpp.cpp",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Baitapchuong2_bai9.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\Baitapchuong2_bai9.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\Baitapchuong2_bai9.cpp",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BaitapChuong2_bai7.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
