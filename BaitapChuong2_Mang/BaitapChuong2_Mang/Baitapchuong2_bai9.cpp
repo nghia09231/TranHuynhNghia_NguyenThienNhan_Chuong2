@@ -79,6 +79,23 @@ int sumOddFirstDigit(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	return sum;
 }
 
+// Bài 2: Liệt kê các số hoàn thiện trong ma trận
+void listPerfectNumbers(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	printf("Cac so hoan thien trong ma tran:\n");
+	int found = 0;
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			if (isPerfect(matrix[i][j])) {
+				printf("%d ", matrix[i][j]);
+				found = 1;
+			}
+		}
+	}
+	if (!found) {
+		printf("Khong co so hoan thien trong ma tran.\n");
+	}
+	printf("\n");
+}
 
 // Hàm chính
 int main() {
@@ -95,6 +112,8 @@ int main() {
 	int sumOdd = sumOddFirstDigit(matrix, m, n);
 	printf("Tong cac phan tu co chu so dau la chu so le: %d\n", sumOdd);
 	
+	// Bài 2: Liệt kê các số hoàn thiện trong ma trận
+	listPerfectNumbers(matrix, m, n);
 
 	return 0;
 }
