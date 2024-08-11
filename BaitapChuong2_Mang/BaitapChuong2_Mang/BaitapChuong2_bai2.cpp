@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
 #include <math.h>
@@ -101,6 +101,23 @@ int tongCacPhanTu(int a[], int n) {
 	}
 	return tong;
 }
+bool laSoNguyenTo(int x) {
+	if (x < 2) return false;
+	for (int i = 2; i <= (int)sqrt((double)x); i++) {  
+		if (x % i == 0) return false;
+	}
+	return true;
+}
+
+void xuatSoNguyenTo(int a[], int n) {
+	printf("Cac so nguyen to trong mang: ");
+	for (int i = 0; i < n; i++) {
+		if (laSoNguyenTo(a[i])) {
+			printf("%d ", a[i]);
+		}
+	}
+	printf("\n");
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -177,7 +194,8 @@ int main() {
 			printf("Tong cac phan tu cua mang la: %d\n", tongCacPhanTu(a, n));
 			break;
 		case 9:
-			
+			xuatSoNguyenTo(a, n);
+			break;
 		case 10:
 			
 		case 11:
