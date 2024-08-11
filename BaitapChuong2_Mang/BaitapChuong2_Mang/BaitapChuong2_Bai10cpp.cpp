@@ -107,6 +107,22 @@ void listRowsWithMostPerfectNumbers(int matrix[MAX_SIZE][MAX_SIZE], int m, int n
 	}
 }
 
+// Bài 3: Liệt kê chỉ số các dòng chứa toàn giá trị chẵn
+void listRowsWithAllEven(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	printf("Cac dong chua toan gia tri chan:\n");
+	for (int i = 0; i < m; i++) {
+		int allEven = 1;
+		for (int j = 0; j < n; j++) {
+			if (matrix[i][j] % 2 != 0) {
+				allEven = 0;
+				break;
+			}
+		}
+		if (allEven) {
+			printf("Dong %d\n", i);
+		}
+	}
+}
 
 // Hàm chính
 int main() {
@@ -125,6 +141,8 @@ int main() {
 	// Bài 2: Liệt kê các dòng có nhiều số hoàn thiện nhất trong ma trận
 	listRowsWithMostPerfectNumbers(matrix, m, n);
 	
+	// Bài 3: Liệt kê chỉ số các dòng chứa toàn giá trị chẵn
+	listRowsWithAllEven(matrix, m, n);
 
 	return 0;
 }
