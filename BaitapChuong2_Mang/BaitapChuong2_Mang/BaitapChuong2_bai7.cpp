@@ -47,11 +47,19 @@ void simplifyFraction(Fraction* frac) {
 	frac->denominator /= gcdValue;
 }
 
-
 // Hàm cộng hai phân số
 Fraction addFractions(Fraction frac1, Fraction frac2) {
 	Fraction result;
 	result.numerator = frac1.numerator * frac2.denominator + frac2.numerator * frac1.denominator;
+	result.denominator = frac1.denominator * frac2.denominator;
+	simplifyFraction(&result);
+	return result;
+}
+
+// Hàm trừ hai phân số
+Fraction subtractFractions(Fraction frac1, Fraction frac2) {
+	Fraction result;
+	result.numerator = frac1.numerator * frac2.denominator - frac2.numerator * frac1.denominator;
 	result.denominator = frac1.denominator * frac2.denominator;
 	simplifyFraction(&result);
 	return result;
@@ -86,6 +94,9 @@ int main() {
 			printFraction(result);
 			break;
 		case 3:			
+			result = subtractFractions(frac1, frac2);
+			printf("Hieu hai phan so la: ");
+			printFraction(result);
 			break;
 		case 4:			
 			break;
