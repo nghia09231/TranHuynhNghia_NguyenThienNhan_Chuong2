@@ -84,6 +84,16 @@ void interchangeSortCharDesc(char* arr, int n) {
 		}
 	}
 }
+void interchangeSortStringAsc(char arr[][100], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (strcmp(arr[i], arr[j]) > 0) {
+				swapString(arr[i], arr[j]);
+			}
+		}
+	}
+}
+
 
 void displayIntArray(int* arr, int n) {
 	for (int i = 0; i < n; i++) {
@@ -102,6 +112,11 @@ void displayCharArray(char* arr, int n) {
 		printf("%c ", arr[i]);
 	}
 	printf("\n");
+}
+void displayStringArray(char arr[][100], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("%s\n", arr[i]);
+	}
 }
 void menu() {
 	int choice;
@@ -235,7 +250,24 @@ void menu() {
 					break;
 		}
 		case 7: {
-		
+					int n;
+					printf("Nhap so phan tu: ");
+					scanf_s("%d", &n);
+					char(*arr)[100] = (char(*)[100])malloc(n * sizeof(*arr));
+					if (arr == NULL) {
+						printf("Khong the cap phat bo nho!\n");
+						return;
+					}
+					printf("Nhap cac chuoi:\n");
+					for (int i = 0; i < n; i++) {
+						printf("Nhap chuoi thu %d: ", i + 1);
+						scanf_s(" %99[^\n]", arr[i], (unsigned)_countof(arr[i]));
+					}
+					interchangeSortStringAsc(arr, n);
+					printf("Mang sau khi sap xep tang dan:\n");
+					displayStringArray(arr, n);
+					free(arr);
+					break;
 		}
 		case 8: {
 				
