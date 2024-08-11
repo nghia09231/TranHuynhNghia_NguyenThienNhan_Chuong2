@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|solutionrelative:BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|solutionrelative:BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -43,6 +47,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BaitapChuong2_mang2chieu_bai3.cpp",
+              "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai3.cpp",
+              "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai3.cpp",
+              "ToolTip": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai3.cpp",
+              "RelativeToolTip": "BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai3.cpp",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAF4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-11T20:17:56.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BaitapChuong2_mang2chieu_bai2.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai2.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai2.cpp",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "BaitapChuong2_mang2chieu_bai1.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai1.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai1.cpp",
@@ -63,12 +80,11 @@
               "RelativeToolTip": "BaitapChuong2_Mang\\BaitapChuong2_mang2chieu_bai1.cpp",
               "ViewState": "AQIAAAEAAAAAAAAAAAAuwBsAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-11T20:07:56.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-11T20:07:56.293Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "baitapChuong2_bai12.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\baitapChuong2_bai12.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\baitapChuong2_bai12.cpp",
@@ -80,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BaitapChuong2_bai11.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai11.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_bai11.cpp",
@@ -92,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BaitapChuong2_Bai10cpp.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_Bai10cpp.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_Bai10cpp.cpp",
@@ -104,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Baitapchuong2_bai9.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\Baitapchuong2_bai9.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\Baitapchuong2_bai9.cpp",
@@ -116,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BaitapChuong2_bai7.cpp",
               "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
               "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
