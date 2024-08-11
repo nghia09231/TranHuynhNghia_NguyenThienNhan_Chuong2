@@ -52,6 +52,25 @@ void sortRows(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
 	}
 }
 
+// Hàm sắp xếp các phần tử trong cột chẵn tăng và cột lẻ giảm
+void sortColumns(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+	for (int j = 0; j < m; j++) {
+		int column[MAX_SIZE];
+		for (int i = 0; i < n; i++) {
+			column[i] = matrix[i][j];
+		}
+		if (j % 2 == 0) { // Cột chẵn
+			qsort(column, n, sizeof(int), compareAsc);
+		}
+		else { // Cột lẻ
+			qsort(column, n, sizeof(int), compareDesc);
+		}
+		for (int i = 0; i < n; i++) {
+			matrix[i][j] = column[i];
+		}
+	}
+}
+
 
 // Hàm chính
 int main() {
@@ -77,6 +96,16 @@ int main() {
 	printf("Ma tran ban dau:\n");
 	printMatrix(matrix, n, m);
 
+	// Bài 2: Sắp xếp các phần tử trong ma trận sao cho cột chẵn tăng và cột lẻ giảm
+	sortColumns(matrix, n, m);
+	printf("Ma tran sau khi sap xep theo cot:\n");
+	printMatrix(matrix, n, m);
 
+	// Nhập lại ma trận
+	inputMatrix(matrix, &n, &m);
+
+	// Xuất ma trận
+	printf("Ma tran ban dau:\n");
+	printMatrix(matrix, n, m);
 	return 0;
 }
