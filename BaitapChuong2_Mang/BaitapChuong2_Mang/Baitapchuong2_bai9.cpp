@@ -110,6 +110,14 @@ int sumLargerThanNextAbs(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	return sum;
 }
 
+// Bài 4: Tính tổng giá trị trên dòng k của ma trận
+int sumRow(int matrix[MAX_SIZE][MAX_SIZE], int n, int k) {
+	int sum = 0;
+	for (int j = 0; j < n; j++) {
+		sum += matrix[k][j];
+	}
+	return sum;
+}
 
 // Hàm chính
 int main() {
@@ -132,6 +140,18 @@ int main() {
 	// Bài 3: Tính tổng các phần tử lớn hơn trị tuyệt đối của phần tử liền sau nó
 	int sumLargerNextAbs = sumLargerThanNextAbs(matrix, m, n);
 	printf("Tong cac phan tu lon hon tri tuyet doi cua phan tu lien sau: %d\n", sumLargerNextAbs);
+
+	// Bài 4: Tính tổng giá trị trên dòng k của ma trận
+	int k;
+	printf("Nhap chi so dong k: ");
+	scanf("%d", &k);
+	if (k >= 0 && k < m) {
+		int rowSum = sumRow(matrix, n, k);
+		printf("Tong gia tri tren dong %d: %d\n", k, rowSum);
+	}
+	else {
+		printf("Chi so dong k khong hop le.\n");
+	}
 
 	return 0;
 }
