@@ -71,6 +71,36 @@ void sortColumns(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
 	}
 }
 
+// Hàm sắp xếp ma trận zic-zac
+void sortZigzag(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+	int temp[MAX_SIZE * MAX_SIZE];
+	int idx = 0;
+
+	// Lưu các phần tử vào mảng tạm
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			temp[idx++] = matrix[i][j];
+		}
+	}
+
+	// Sắp xếp mảng tạm
+	qsort(temp, n * m, sizeof(int), compareAsc);
+
+	// Đưa các phần tử vào ma trận theo kiểu zic-zac
+	idx = 0;
+	for (int i = 0; i < n; i++) {
+		if (i % 2 == 0) {
+			for (int j = 0; j < m; j++) {
+				matrix[i][j] = temp[idx++];
+			}
+		}
+		else {
+			for (int j = m - 1; j >= 0; j--) {
+				matrix[i][j] = temp[idx++];
+			}
+		}
+	}
+}
 
 // Hàm chính
 int main() {
@@ -107,5 +137,11 @@ int main() {
 	// Xuất ma trận
 	printf("Ma tran ban dau:\n");
 	printMatrix(matrix, n, m);
+
+	// Bài 3: Sắp xếp ma trận tăng dần/giảm dần theo zic-zac
+	sortZigzag(matrix, n, m);
+	printf("Ma tran sau khi sap xep zic-zac:\n");
+	printMatrix(matrix, n, m);
+
 	return 0;
 }
