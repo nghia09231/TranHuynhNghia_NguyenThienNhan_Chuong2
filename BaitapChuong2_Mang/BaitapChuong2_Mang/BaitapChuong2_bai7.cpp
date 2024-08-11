@@ -20,6 +20,43 @@ void inputFraction(Fraction* frac) {
 	} while (frac->denominator == 0);
 }
 
+// Hàm xuất phân số
+void printFraction(Fraction frac) {
+	if (frac.denominator < 0) { // Đưa dấu âm về tử số
+		frac.numerator = -frac.numerator;
+		frac.denominator = -frac.denominator;
+	}
+	if (frac.denominator == 1) {
+		printf("%d\n", frac.numerator); // Xuất dưới dạng số nguyên nếu mẫu số là 1
+	}
+	else {
+		printf("%d/%d\n", frac.numerator, frac.denominator);
+	}
+}
+
+// Hàm tìm ước số chung lớn nhất
+int gcd(int a, int b) {
+	if (b == 0) return a;
+	return gcd(b, a % b);
+}
+
+// Hàm tối giản phân số
+void simplifyFraction(Fraction* frac) {
+	int gcdValue = gcd(abs(frac->numerator), abs(frac->denominator));
+	frac->numerator /= gcdValue;
+	frac->denominator /= gcdValue;
+}
+
+
+// Hàm cộng hai phân số
+Fraction addFractions(Fraction frac1, Fraction frac2) {
+	Fraction result;
+	result.numerator = frac1.numerator * frac2.denominator + frac2.numerator * frac1.denominator;
+	result.denominator = frac1.denominator * frac2.denominator;
+	simplifyFraction(&result);
+	return result;
+}
+
 
 int main() {
 	Fraction frac1, frac2, result;
@@ -44,6 +81,9 @@ int main() {
 			inputFraction(&frac2);
 			break;
 		case 2:			
+			result = addFractions(frac1, frac2);
+			printf("Tong hai phan so la: ");
+			printFraction(result);
 			break;
 		case 3:			
 			break;
