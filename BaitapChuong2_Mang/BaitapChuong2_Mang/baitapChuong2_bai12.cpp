@@ -36,6 +36,14 @@ int sumMainDiagonal(int matrix[MAX_SIZE][MAX_SIZE], int n) {
 	return sum;
 }
 
+// Hàm tính tổng các phần tử trên đường chéo phụ
+int sumAntiDiagonal(int matrix[MAX_SIZE][MAX_SIZE], int n) {
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+		sum += matrix[i][n - 1 - i];
+	}
+	return sum;
+}
 
 // Hàm chính
 int main() {
@@ -53,7 +61,9 @@ int main() {
 	int sumMain = sumMainDiagonal(matrix, n);
 	printf("Tong cac phan tu tren duong cheo chinh: %d\n", sumMain);
 
-	
+	// Bài 2: Tính tổng các phần tử trên đường chéo phụ
+	int sumAnti = sumAntiDiagonal(matrix, n);
+	printf("Tong cac phan tu tren duong cheo phu: %d\n", sumAnti);
 
 	return 0;
 }
