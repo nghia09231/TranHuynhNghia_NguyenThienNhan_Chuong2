@@ -167,6 +167,23 @@ void xuatMaxMinKemViTri(int a[], int n) {
 	}
 	printf("\n");
 }
+void gopMang(int b[], int m, int c[], int n, int a[]) {
+	int i = 0, j = 0, k = 0;
+	while (i < m && j < n) {
+		if (b[i] < c[j]) {
+			a[k++] = b[i++];
+		}
+		else {
+			a[k++] = c[j++];
+		}
+	}
+	while (i < m) {
+		a[k++] = b[i++];
+	}
+	while (j < n) {
+		a[k++] = c[j++];
+	}
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -255,7 +272,16 @@ int main() {
 			xuatMaxMinKemViTri(a, n);
 			break;
 		case 13:
-		
+			printf("Nhap so phan tu cua mang b: ");
+			scanf("%d", &m);
+			nhapMang(b, &m);
+			printf("Nhap so phan tu cua mang c: ");
+			scanf("%d", &n);
+			nhapMang(c, &n);
+			gopMang(b, m, c, n, d);
+			printf("Mang sau khi gop va sap xep: ");
+			xuatMang(d, m + n);
+			break;
 		case 0:
 		
 		default:
