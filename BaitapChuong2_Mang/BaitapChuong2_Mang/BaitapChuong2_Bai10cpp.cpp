@@ -81,6 +81,31 @@ void listColumnsWithMinSum(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	}
 }
 
+// Bài 2: Liệt kê các dòng có nhiều số hoàn thiện nhất trong ma trận
+void listRowsWithMostPerfectNumbers(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	int maxPerfectCount = 0;
+	int perfectCount[MAX_SIZE] = { 0 };
+
+	for (int i = 0; i < m; i++) {
+		int count = 0;
+		for (int j = 0; j < n; j++) {
+			if (isPerfect(matrix[i][j])) {
+				count++;
+			}
+		}
+		perfectCount[i] = count;
+		if (count > maxPerfectCount) {
+			maxPerfectCount = count;
+		}
+	}
+
+	printf("Cac dong co nhieu so hoan thien nhat (%d):\n", maxPerfectCount);
+	for (int i = 0; i < m; i++) {
+		if (perfectCount[i] == maxPerfectCount) {
+			printf("Dong %d\n", i);
+		}
+	}
+}
 
 
 // Hàm chính
@@ -97,6 +122,8 @@ int main() {
 	// Bài 1: Liệt kê các cột có tổng nhỏ nhất trong ma trận
 	listColumnsWithMinSum(matrix, m, n);
 
+	// Bài 2: Liệt kê các dòng có nhiều số hoàn thiện nhất trong ma trận
+	listRowsWithMostPerfectNumbers(matrix, m, n);
 	
 
 	return 0;
