@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8FF67C8A-6A1D-4363-B16E-B6CDEB02C92C}|BaitapChuong2_Mang\\BaitapChuong2_Mang.vcxproj|solutionrelative:BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaitapChuong2_bai7.cpp",
+              "DocumentMoniker": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
+              "RelativeDocumentMoniker": "BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
+              "ToolTip": "D:\\HK Summer\\KT_LT\\Exercise\\Ch\u01B0\u01A1ng 2\\TranHuynhNghia_NguyenThienNhan_Chuong2\\BaitapChuong2_Mang\\BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
+              "RelativeToolTip": "BaitapChuong2_Mang\\BaitapChuong2_bai7.cpp",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-11T18:11:25.254Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
