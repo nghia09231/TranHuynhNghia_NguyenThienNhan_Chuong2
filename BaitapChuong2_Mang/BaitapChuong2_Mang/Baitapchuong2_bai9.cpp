@@ -152,6 +152,36 @@ int countOccurrences(int matrix[MAX_SIZE][MAX_SIZE], int m, int n, int x) {
 	return count;
 }
 
+// Bài 7: Đếm số lượng các phần tử là số chẵn, số lẻ, số âm, số dương, số nguyên tố
+void countElements(int matrix[MAX_SIZE][MAX_SIZE], int m, int n, int* evenCount, int* oddCount, int* negativeCount, int* positiveCount, int* primeCount) {
+	*evenCount = 0;
+	*oddCount = 0;
+	*negativeCount = 0;
+	*positiveCount = 0;
+	*primeCount = 0;
+
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			int value = matrix[i][j];
+			if (value % 2 == 0) {
+				(*evenCount)++;
+			}
+			else {
+				(*oddCount)++;
+			}
+			if (value < 0) {
+				(*negativeCount)++;
+			}
+			else if (value > 0) {
+				(*positiveCount)++;
+			}
+			if (isPrime(value)) {
+				(*primeCount)++;
+			}
+		}
+	}
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -196,6 +226,15 @@ int main() {
 	scanf("%d", &x);
 	int occurrences = countOccurrences(matrix, m, n, x);
 	printf("Gia tri %d xuat hien %d lan.\n", x, occurrences);
+
+	// Bài 7: Đếm số lượng các phần tử là số chẵn, số lẻ, số âm, số dương, số nguyên tố
+	int evenCount, oddCount, negativeCount, positiveCount, primeCount;
+	countElements(matrix, m, n, &evenCount, &oddCount, &negativeCount, &positiveCount, &primeCount);
+	printf("So luong so chan: %d\n", evenCount);
+	printf("So luong so le: %d\n", oddCount);
+	printf("So luong so am: %d\n", negativeCount);
+	printf("So luong so duong: %d\n", positiveCount);
+	printf("So luong so nguyen to: %d\n", primeCount);
 
 	return 0;
 }
