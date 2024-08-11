@@ -94,6 +94,13 @@ int demSoLuongLonHonX(int a[], int n, int x) {
 	}
 	return dem;
 }
+int tongCacPhanTu(int a[], int n) {
+	int tong = 0;
+	for (int i = 0; i < n; i++) {
+		tong += a[i];
+	}
+	return tong;
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -167,7 +174,8 @@ int main() {
 			printf("So luong phan tu lon hon %d la: %d\n", x, demSoLuongLonHonX(a, n, x));
 			break;
 		case 8:
-			
+			printf("Tong cac phan tu cua mang la: %d\n", tongCacPhanTu(a, n));
+			break;
 		case 9:
 			
 		case 10:
