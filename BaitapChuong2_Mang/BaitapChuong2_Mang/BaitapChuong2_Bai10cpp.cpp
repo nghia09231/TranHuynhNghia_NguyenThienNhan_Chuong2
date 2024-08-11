@@ -144,6 +144,24 @@ void findMostFrequentValue(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	printf("Gia tri xuat hien nhieu nhat: %d (xuat hien %d lan)\n", mostFrequentValue, maxFreq);
 }
 
+// Bài 5: Tìm số nguyên tố nhỏ nhất trong ma trận
+void findSmallestPrime(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	int smallestPrime = 1e9;
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			if (isPrime(matrix[i][j]) && matrix[i][j] < smallestPrime) {
+				smallestPrime = matrix[i][j];
+			}
+		}
+	}
+	if (smallestPrime == 1e9) {
+		printf("Khong co so nguyen to trong ma tran.\n");
+	}
+	else {
+		printf("So nguyen to nho nhat: %d\n", smallestPrime);
+	}
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -166,6 +184,9 @@ int main() {
 
 	// Bài 4: Tìm giá trị xuất hiện nhiều nhất trong ma trận
 	findMostFrequentValue(matrix, m, n);
+
+	// Bài 5: Tìm số nguyên tố nhỏ nhất trong ma trận
+	findSmallestPrime(matrix, m, n);
 
 	return 0;
 }
