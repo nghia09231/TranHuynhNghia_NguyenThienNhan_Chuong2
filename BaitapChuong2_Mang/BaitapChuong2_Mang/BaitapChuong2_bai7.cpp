@@ -65,6 +65,15 @@ Fraction subtractFractions(Fraction frac1, Fraction frac2) {
 	return result;
 }
 
+// Hàm nhân hai phân số
+Fraction multiplyFractions(Fraction frac1, Fraction frac2) {
+	Fraction result;
+	result.numerator = frac1.numerator * frac2.numerator;
+	result.denominator = frac1.denominator * frac2.denominator;
+	simplifyFraction(&result);
+	return result;
+}
+
 
 int main() {
 	Fraction frac1, frac2, result;
@@ -99,6 +108,9 @@ int main() {
 			printFraction(result);
 			break;
 		case 4:			
+			result = multiplyFractions(frac1, frac2);
+			printf("Tich hai phan so la: ");
+			printFraction(result);
 			break;
 		case 5:			
 			break;
