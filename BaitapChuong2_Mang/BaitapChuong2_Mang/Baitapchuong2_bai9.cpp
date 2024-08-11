@@ -119,6 +119,26 @@ int sumRow(int matrix[MAX_SIZE][MAX_SIZE], int n, int k) {
 	return sum;
 }
 
+// Bài 5: Tính tổng các giá trị nằm trên biên của ma trận
+int sumBorder(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	int sum = 0;
+	// Tổng hàng đầu và hàng cuối
+	for (int j = 0; j < n; j++) {
+		sum += matrix[0][j]; // Hàng đầu
+		if (m > 1) {
+			sum += matrix[m - 1][j]; // Hàng cuối
+		}
+	}
+	// Tổng cột bên trái và bên phải (trừ góc)
+	for (int i = 1; i < m - 1; i++) {
+		sum += matrix[i][0]; // Cột bên trái
+		if (n > 1) {
+			sum += matrix[i][n - 1]; // Cột bên phải
+		}
+	}
+	return sum;
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -152,6 +172,11 @@ int main() {
 	else {
 		printf("Chi so dong k khong hop le.\n");
 	}
+
+	// Bài 5: Tính tổng các giá trị nằm trên biên của ma trận
+	int borderSum = sumBorder(matrix, m, n);
+	printf("Tong cac gia tri nam tren bien cua ma tran: %d\n", borderSum);
+
 
 	return 0;
 }
