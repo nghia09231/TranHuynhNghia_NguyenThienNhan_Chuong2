@@ -21,6 +21,26 @@ void xuatMang(int a[], int n) {
 	}
 	printf("\n");
 }
+int timMax(int a[], int n) {
+	int max = a[0];
+	for (int i = 1; i < n; i++) {
+		if (a[i] > max) {
+			max = a[i];
+		}
+	}
+	return max;
+}
+
+int timMin(int a[], int n) {
+	int min = a[0];
+	for (int i = 1; i < n; i++) {
+		if (a[i] < min) {
+			min = a[i];
+		}
+	}
+	return min;
+}
+
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -52,7 +72,8 @@ int main() {
 			xuatMang(a, n);
 			break;
 		case 3:
-			
+			printf("Max: %d, Min: %d\n", timMax(a, n), timMin(a, n));
+			break;
 		case 4: {
 				
 		}
