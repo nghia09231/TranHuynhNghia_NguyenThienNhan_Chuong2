@@ -12,7 +12,15 @@ bool isPrime(int n) {
 	}
 	return true;
 }
-
+bool hasAllOddDigits(int n) {
+	if (n == 0) return false;
+	while (n > 0) {
+		int digit = n % 10;
+		if (digit % 2 == 0) return false;
+		n /= 10;
+	}
+	return true;
+}
 int main() {
 	int size;
 
@@ -57,7 +65,14 @@ int main() {
 					break;
 		}
 		case 2: {
-				
+					printf("Cac phan tu ma tung chu so la so le:\n");
+					for (int i = 0; i < size; i++) {
+						if (hasAllOddDigits(arr[i])) {
+							printf("%d ", arr[i]);
+						}
+					}
+					printf("\n");
+					break;
 		}
 		case 3: {
 				
