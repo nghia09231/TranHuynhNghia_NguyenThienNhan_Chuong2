@@ -52,6 +52,31 @@ void demChanLe(int a[], int n, int *chan, int *le) {
 		}
 	}
 }
+int timKiemTuyenTinh(int a[], int n, int x) {
+	for (int i = 0; i < n; i++) {
+		if (a[i] == x) {
+			return i;
+		}
+	}
+	return -1;
+}
+int timKiemNhiPhan(int a[], int n, int x) {
+	int left = 0, right = n - 1;
+	while (left <= right) {
+		int mid = (left + right) / 2;
+		if (a[mid] == x) {
+			return mid;
+		}
+		else if (a[mid] < x) {
+			left = mid + 1;
+		}
+		else {
+			right = mid - 1;
+		}
+	}
+	return -1;
+}
+
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -92,7 +117,27 @@ int main() {
 					break;
 		}
 		case 5: {
-				
+					int viTriTuyenTinh, viTriNhiPhan;
+					printf("Nhap gia tri x can tim: ");
+					scanf("%d", &x);
+					printf("Tim kiem tuyen tinh:\n");
+					viTriTuyenTinh = timKiemTuyenTinh(a, n, x);
+					if (viTriTuyenTinh != -1) {
+						printf("Tim thay x o vi tri %d\n", viTriTuyenTinh);
+					}
+					else {
+						printf("Khong tim thay x\n");
+					}
+					printf("Tim kiem nhi phan:\n");
+					
+					viTriNhiPhan = timKiemNhiPhan(a, n, x);
+					if (viTriNhiPhan != -1) {
+						printf("Tim thay x o vi tri %d\n", viTriNhiPhan);
+					}
+					else {
+						printf("Khong tim thay x\n");
+					}
+					break;
 		}
 		case 6:
 			
