@@ -162,6 +162,20 @@ void findSmallestPrime(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	}
 }
 
+// Bài 6: Tìm phần tử lớn (nhỏ) nhất trong dòng thứ k
+void findExtremaInRow(int matrix[MAX_SIZE][MAX_SIZE], int n, int k, int* min, int* max) {
+	*min = matrix[k][0];
+	*max = matrix[k][0];
+	for (int j = 1; j < n; j++) {
+		if (matrix[k][j] < *min) {
+			*min = matrix[k][j];
+		}
+		if (matrix[k][j] > *max) {
+			*max = matrix[k][j];
+		}
+	}
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -187,6 +201,21 @@ int main() {
 
 	// Bài 5: Tìm số nguyên tố nhỏ nhất trong ma trận
 	findSmallestPrime(matrix, m, n);
+
+	// Bài 6: Tìm phần tử lớn (nhỏ) nhất trong dòng thứ k
+	int k;
+	printf("Nhap chi so dong k: ");
+	scanf("%d", &k);
+	if (k >= 0 && k < m) {
+		int rowMin, rowMax;
+		findExtremaInRow(matrix, n, k, &rowMin, &rowMax);
+		printf("Trong dong %d:\n", k);
+		printf("Gia tri nho nhat: %d\n", rowMin);
+		printf("Gia tri lon nhat: %d\n", rowMax);
+	}
+	else {
+		printf("Chi so dong k khong hop le.\n");
+	}
 
 	return 0;
 }
