@@ -97,6 +97,20 @@ void listPerfectNumbers(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	printf("\n");
 }
 
+// Bài 3: Tính tổng các phần tử lớn hơn trị tuyệt đối của phần tử liền sau nó
+int sumLargerThanNextAbs(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	int sum = 0;
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n - 1; j++) {
+			if (matrix[i][j] > abs(matrix[i][j + 1])) {
+				sum += matrix[i][j];
+			}
+		}
+	}
+	return sum;
+}
+
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -114,6 +128,10 @@ int main() {
 	
 	// Bài 2: Liệt kê các số hoàn thiện trong ma trận
 	listPerfectNumbers(matrix, m, n);
+
+	// Bài 3: Tính tổng các phần tử lớn hơn trị tuyệt đối của phần tử liền sau nó
+	int sumLargerNextAbs = sumLargerThanNextAbs(matrix, m, n);
+	printf("Tong cac phan tu lon hon tri tuyet doi cua phan tu lien sau: %d\n", sumLargerNextAbs);
 
 	return 0;
 }
