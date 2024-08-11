@@ -41,6 +41,17 @@ int timMin(int a[], int n) {
 	return min;
 }
 
+void demChanLe(int a[], int n, int *chan, int *le) {
+	*chan = *le = 0;
+	for (int i = 0; i < n; i++) {
+		if (a[i] % 2 == 0) {
+			(*chan)++;
+		}
+		else {
+			(*le)++;
+		}
+	}
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -75,7 +86,10 @@ int main() {
 			printf("Max: %d, Min: %d\n", timMax(a, n), timMin(a, n));
 			break;
 		case 4: {
-				
+					int chan, le;
+					demChanLe(a, n, &chan, &le);
+					printf("So phan tu chan: %d, le: %d\n", chan, le);
+					break;
 		}
 		case 5: {
 				
