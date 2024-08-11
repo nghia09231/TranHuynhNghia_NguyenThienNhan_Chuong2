@@ -118,6 +118,26 @@ void xuatSoNguyenTo(int a[], int n) {
 	}
 	printf("\n");
 }
+bool laSoHoanThien(int x) {
+	if (x < 1) return false;
+	int tong = 0;
+	for (int i = 1; i <= x / 2; i++) {
+		if (x % i == 0) {
+			tong += i;
+		}
+	}
+	return tong == x;
+}
+
+void xuatSoHoanThien(int a[], int n) {
+	printf("Cac so hoan thien trong mang: ");
+	for (int i = 0; i < n; i++) {
+		if (laSoHoanThien(a[i])) {
+			printf("%d ", a[i]);
+		}
+	}
+	printf("\n");
+}
 int main() {
 	int n, m, choice, x;
 	int a[100], b[100], c[100], d[200];
@@ -197,7 +217,8 @@ int main() {
 			xuatSoNguyenTo(a, n);
 			break;
 		case 10:
-			
+			xuatSoHoanThien(a, n);
+			break;
 		case 11:
 
 		case 12:
