@@ -124,6 +124,26 @@ void listRowsWithAllEven(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
 	}
 }
 
+// Bài 4: Tìm giá trị xuất hiện nhiều nhất trong ma trận
+void findMostFrequentValue(int matrix[MAX_SIZE][MAX_SIZE], int m, int n) {
+	int freq[MAX_SIZE * MAX_SIZE * 2] = { 0 }; // Giả sử giá trị nằm trong phạm vi -MAX_SIZE*MAX_SIZE đến MAX_SIZE*MAX_SIZE
+	int maxFreq = 0;
+	int mostFrequentValue = 0;
+
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			int value = matrix[i][j];
+			freq[value + MAX_SIZE * MAX_SIZE]++;
+			if (freq[value + MAX_SIZE * MAX_SIZE] > maxFreq) {
+				maxFreq = freq[value + MAX_SIZE * MAX_SIZE];
+				mostFrequentValue = value;
+			}
+		}
+	}
+
+	printf("Gia tri xuat hien nhieu nhat: %d (xuat hien %d lan)\n", mostFrequentValue, maxFreq);
+}
+
 // Hàm chính
 int main() {
 	int matrix[MAX_SIZE][MAX_SIZE];
@@ -143,6 +163,9 @@ int main() {
 	
 	// Bài 3: Liệt kê chỉ số các dòng chứa toàn giá trị chẵn
 	listRowsWithAllEven(matrix, m, n);
+
+	// Bài 4: Tìm giá trị xuất hiện nhiều nhất trong ma trận
+	findMostFrequentValue(matrix, m, n);
 
 	return 0;
 }
