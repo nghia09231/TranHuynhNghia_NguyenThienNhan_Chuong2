@@ -94,7 +94,10 @@
     <ClCompile Include="BaitapChuong2_bai6cpp.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="BaitapChuong2_bai7.cpp" />
+    <ClCompile Include="BaitapChuong2_bai7.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Baitapchuong2_bai9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
